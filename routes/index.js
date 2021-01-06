@@ -35,7 +35,7 @@ router.post('/shortner/create', async function(req, res, next) {
 
 	url.save()
 	.then(data => {
-		res.json({status:1, data:data})
+		res.json({status:1, data:data}, 201)
 	})
 	.catch(err => {
 		res.json({ status:0, message:err })
